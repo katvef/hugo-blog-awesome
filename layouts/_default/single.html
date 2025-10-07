@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $page := . }}
 <div class="wrapper post">
     <main class="page-content" aria-label="Content">
         <article>
@@ -11,6 +12,7 @@
                     <time datetime="{{ $ISO_time }}" itemprop="datePublished"> {{ . | time.Format $configDateFormat }} </time>
                 </div>
                 {{ end }}
+                {{ partial "reading-time.html" $page }}
             </header>
             {{ partial "toc.html" .}}
             <div class="page-content">
