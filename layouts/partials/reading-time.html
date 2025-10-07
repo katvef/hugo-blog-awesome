@@ -3,5 +3,5 @@
 {{ $seconds := mod (div (mul .WordCount 60) $wpm) 60 }}
 
 <div class="post-meta" style="font-style: italic; font-size: 0.9em;">
-    {{ printf "%d min %d sec read" $minutes $seconds }}
+    {{ printf "est. %d min %d sec read" $minutes $seconds }}
 </div>
