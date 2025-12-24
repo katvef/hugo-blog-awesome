@@ -8,6 +8,12 @@
     <div class="post-meta" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; max-height: 2en; text-overflow: ellipsis; text-align: center; margin-left: 1rem; margin-right: 1rem; font-size: 80%;">
         {{ .Description | default "" }}
     </div>
+    {{ if in .RelPermalink "/posts/locked/" }}
+    <div class="post-item-right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon-star"><path d="M8 14v-4a8 8 0 1 1 16 0v4h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V16a2 2 0 0 1 2-2h2zm4 0h8v-4a4 4 0 1 0-8 0v4zm4 6a3 3 0 0 0-1 5.83V26h2v-0.17A3 3 0 0 0 16 20z"></path></svg>
+
+    </div>
+    {{ end }}
     {{ if .Params.isStarred }}
     <div class="post-item-right">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon-star"><path d="M16 23.027L24.24 28l-2.187-9.373 7.28-6.307-9.587-.827-3.747-8.827-3.747 8.827-9.587.827 7.267 6.307L7.759 28l8.24-4.973z"></path></svg>
